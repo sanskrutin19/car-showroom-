@@ -1,0 +1,763 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav h1 {
+    font-size: 26px;
+    color: #ff4500;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff4500;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url("C:\Users\Admin\OneDrive\Desktop\cubicles\task 4\OIP.jpg") no-repeat center center/cover;
+    background-attachment: fixed; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff5733;
+}
+
+.hero .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-image img {
+    width: 100%;
+    max-width: 550px;
+    border-radius: 10px;
+}
+
+.hero .hero-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.hero .hero-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px black;
+}
+
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.image-gallery {
+    text-align: center;
+    padding: 60px 20px;
+    background: #222;
+}
+
+.image-gallery h2 {
+    color: #ff4500;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+.gallery-item {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px; 
+}
+
+.gallery-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.gallery-item:hover .gallery-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.gallery-card-front,
+.gallery-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.gallery-card-front {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: justify;
+}
+
+
+.gallery-card-back {
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 10px;
+}
+
+.btn:hover {
+    background: #ff4500;
+    color: #1a1a1a;
+    box-shadow: 0px 0px 10px #ff4500;
+}
+
+.about {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    position: relative;
+}
+
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+
+.about-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4500;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.about-text .btn:hover {
+    background: #cc3700;
+}
+
+
+.about-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+
+.reviews {
+    margin-top: 50px;
+}
+
+.reviews h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+ .about-cards h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.about-cards p{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.review-box {
+    background: black;
+    padding: 15px;
+    width: 60%;
+    margin: 10px auto;
+    border-left: 5px solid #ff4500;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.decorations .line {
+    width: 60px;
+    height: 4px;
+    background: #ff4500;
+    margin: 20px auto;
+}
+
+.decorations .circle {
+    width: 40px;
+    height: 40px;
+    background: #ff4500;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.decorations .square {
+    width: 40px;
+    height: 40px;
+    background: #ff4500;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+
+
+.featured {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: black;
+}
+
+
+.car-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;  
+    flex-wrap: wrap;
+}
+
+.car-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 280px;  
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;  
+    object-fit: cover;
+    border-bottom: 3px solid #ff4500;
+}
+
+
+.car-card h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-top: 15px;
+}
+
+.car-card p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4500;
+    margin-top: 5px;
+}
+
+
+.collection {
+    text-align: center;
+    padding: 60px 20px;
+    background: #000000;
+}
+
+.collection h2 {
+    color: #ff66b2;
+    margin-top : 40px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.collection p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.services {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #eef1f5, #dce4eb);
+    position: relative;
+}
+.services h1{
+    font-size:2.5rem;
+    color: black;
+    text-align: center;
+    padding-bottom: 50px ;
+}
+.service-box h3{
+    color: #000000;
+}
+.service-box p {
+    color: #cc3700;
+}
+.services-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+.service-box {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    border-left: 5px solid #ff4500;
+}
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.service-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.service-card  h3 {
+    color: #000000;
+}
+.service-card p{
+    color:#000000
+}
+.extra-services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.extra-card {
+    background: #ff4500;
+    color: white;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.extra-card:hover {
+    transform: scale(1.05);
+}
+.service-box .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.car-gallery h1{
+    text-align: center;
+    font-size: 2rem;
+    padding: 50px;
+}
+.car-collection {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, #eef1f5, #dce4eb);
+    position: relative;
+}
+
+
+.collection-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.car-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.car-info {
+    padding: 15px;
+}
+
+.car-info h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.car-info p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4500;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.modal-content h2 {
+    color: #ff4500;
+}
+
+.modal-content p {
+    margin: 10px 0;
+    color: #000000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.btn {
+    background: #ff4500;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #cc3700;
+}
+
+.contact {
+    text-align: center;
+    padding: 60px 20px;
+    background: black;
+}
+
+.contact h2, .map h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 900px;
+    margin: auto;
+    gap: 20px;
+}
+
+.contact-form, .contact-details {
+    flex: 1;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 350px;
+}
+
+.contact-form h3, .contact-details h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 120px;
+}
+
+.contact-form .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background: #ff4500;
+}
+
+.contact-details p {
+    font-size: 1rem;
+    color: white;
+    margin: 8px 0;
+}
+
+.map {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.map-container {
+    max-width: 900px;
+    margin: 30px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height:350px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+}
